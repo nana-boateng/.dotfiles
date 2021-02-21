@@ -26,6 +26,7 @@ plugins=(git extract z zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # custom aliases
+alias la="lsd -Al --group-dirs"
 alias gaddall="git add . && git commit -m $*"
 alias add="git add $*"
 alias comm="git commit -m $*"
