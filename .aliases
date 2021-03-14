@@ -1,0 +1,26 @@
+
+# terminal
+alias la="lsd -Al --group-dirs"
+alias venv"source ./venv/bin/activate"
+alias copy="xclip"
+alias paste="xclip -o"
+
+# zsh
+alias rezsh="source ~/.zshrc"
+
+# git 
+alias gst="git status"
+alias all="git add . && git commit -m $*"
+alias add="git add $*"
+alias comm="git commit -m -S $*"
+
+# vim 
+alias v="nvim"
+alias vim="nvim"
+
+# manjaro 
+alias pacsearch="sudo pamac search -a $*"
+alias pacadd="sudo pamac install $*"
+
+# node/npm
+alias ni="npm install $*"
