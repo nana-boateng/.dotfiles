@@ -12,7 +12,7 @@ alias rezsh="source ~/.zshrc"
 alias gst="git status"
 alias all="git add . && git commit -m $*"
 alias add="git add $*"
-alias comm="git commit -m -S $*"
+alias comm="git commit -S -m $*"
 
 # vim 
 alias v="nvim"
