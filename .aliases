@@ -12,15 +12,33 @@ alias rezsh="source ~/.zshrc"
 alias gst="git status"
 alias all="git add . && git commit -m $*"
 alias add="git add $*"
-alias comm="git commit -S -m $*"
+alias comm="git commit -m $*"
+alias sign-comm="git commit -S -m $*"
 
 # vim 
 alias v="nvim"
 alias vim="nvim"
+alias aliases="nvim ~/.aliases"
 
-# manjaro 
-alias pacsearch="sudo pamac search -a $*"
-alias pacadd="sudo pamac install $*"
+# manjaro install shortcuts
+# pamac
+alias pamsearch="sudo pamac search -a $*"
+alias pamadd="sudo pamac install $*"
+alias pacadd="sudo pacman -Syu $*"
+
+# tar
+alias untar="tar -xvf $*"
 
 # node/npm
 alias ni="npm install $*"
+
+# desktop
+alias wally="nitrogen --set-zoom-fill --random ~/Pictures/wallpapers"
+
+# rofi
+alias rofi="rofi -modi run,drun -show drun -columns 1 -width 24 -lines 8 -padding 45 -hide-scrollbar -show-icons -drun-icon-theme 'Papirus'"
+
+# expressvpn
+alias vpn="expressvpn $*"
+alias vpnst="expressvpn status"
+alias vpndiscon="expressvpn disconnect"
