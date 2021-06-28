@@ -20,6 +20,12 @@ alias v="nvim"
 alias vim="nvim"
 alias aliases="nvim ~/.aliases"
 
+# docker
+alias compose-up="sudo docker-compose up -d"
+alias compose-pull="sudo docker-compose pull $*"
+alias compose-down="sudo docker-compose down"
+alias docker-prune="sudo docker system prune -a --volumes --force"
+
 # manjaro install shortcuts
 # pamac
 alias pamsearch="sudo pamac search -a $*"
