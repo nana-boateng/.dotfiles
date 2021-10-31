@@ -48,3 +48,8 @@ alias rofi="rofi -modi run,drun -show drun -columns 1 -width 24 -lines 8 -paddin
 alias vpn="expressvpn $*"
 alias vpnst="expressvpn status"
 alias vpndiscon="expressvpn disconnect"
+
+# youtube-dl
+alias download-vid="python3 $(which youtube-dl) --newline -i -o "./vid/%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native $1"
+alias download-vid="python3 $(which youtube-dl) --newline -i -o "./musc/%(title)s.%(ext)s" -x --audio-format mp3 --ignore-config --hls-prefer-native  $1"
+
