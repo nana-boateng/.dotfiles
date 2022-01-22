@@ -85,3 +85,5 @@ run-server() {
     clear && npm run mon
   fi
 }
+
+eval "$(starship init zsh)"
