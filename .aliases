@@ -1,6 +1,9 @@
 
 # terminal
-alias la="lsd -Al --group-dirs"
+alias la="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git --all"
+alias e="exa --long"
+alias eee="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git"
+alias ccc="clear"
 alias venv"source ./venv/bin/activate"
 alias copy="xclip"
 alias paste="xclip -o"
@@ -10,9 +13,9 @@ alias rezsh="source ~/.zshrc"
 
 # git 
 alias gst="git status"
-alias all="git add . && git commit -m $*"
-alias add="git add $*"
-alias comm="git commit -m $*"
+alias gall="git add . && git commit -m $*"
+alias gadd="git add $*"
+alias gcomm="git commit -m $*"
 alias sign-comm="git commit -S -m $*"
 
 # vim 
