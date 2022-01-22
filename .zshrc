@@ -8,32 +8,10 @@ source ~/.env
 
 
 # Set name of the theme to load --- if set to "random", it will
-ZSH_THEME="spaceship"
-
-# Spaceship options
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  exec_time     # Execution time
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  node          # Node.js section
-  docker        # Docker section
-  aws           # Amazon Web Services section
-  venv          # virtualenv section
-  pyenv         # Pyenv section
-  kubectl       # Kubectl context section
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-# prompt options
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
+# ZSH_THEME="spaceship"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(extract zsh-z)
+plugins=(extract zsh-z zsh-syntax-highlighting)
 
 #source oh-my-zsh for all the extras
 source $ZSH/oh-my-zsh.sh
