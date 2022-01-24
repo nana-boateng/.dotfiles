@@ -1,5 +1,9 @@
 
 # terminal
+alias e="exa -F"
+alias etree="exa --tree --color-scale -L 5"
+alias ell="exa -l --git --group-directories-first"
+alias elg="exa --grid --long --all --classify --binary"
 alias la="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git --all"
 alias e="exa --long"
 alias eee="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git"
@@ -53,6 +57,6 @@ alias vpnst="expressvpn status"
 alias vpndiscon="expressvpn disconnect"
 
 # youtube-dl
-alias download-vid="python3 $(which youtube-dl) --newline -i -o "./vid/%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native $1"
-alias download-vid="python3 $(which youtube-dl) --newline -i -o "./musc/%(title)s.%(ext)s" -x --audio-format mp3 --ignore-config --hls-prefer-native  $1"
+# alias download-vid="python3 $(which youtube-dl) --newline -i -o "./vid/%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native $1"
+# alias download-vid="python3 $(which youtube-dl) --newline -i -o "./musc/%(title)s.%(ext)s" -x --audio-format mp3 --ignore-config --hls-prefer-native  $1"
 

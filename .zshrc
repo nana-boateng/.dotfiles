@@ -4,9 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-source ~/.env
-
-
 # Set name of the theme to load --- if set to "random", it will
 # ZSH_THEME="spaceship"
 
@@ -15,6 +12,10 @@ plugins=(extract zsh-z zsh-syntax-highlighting)
 
 #source oh-my-zsh for all the extras
 source $ZSH/oh-my-zsh.sh
+
+if [[ -e ~/.env ]]; then
+  source ~/.env
+fi
 
 # source aliases
 if [[ -e ~/.aliases ]]; then
