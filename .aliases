@@ -1,6 +1,9 @@
 
 # terminal
-alias la="lsd -Al --group-dirs"
+alias e="exa -F"
+alias etree="exa --tree --color-scale -L 5"
+alias ell="exa -l --git --group-directories-first"
+alias elg="exa --grid --long --all --classify --binary"
 alias venv"source ./venv/bin/activate"
 alias copy="xclip"
 alias paste="xclip -o"
@@ -50,6 +53,6 @@ alias vpnst="expressvpn status"
 alias vpndiscon="expressvpn disconnect"
 
 # youtube-dl
-alias download-vid="python3 $(which youtube-dl) --newline -i -o "./vid/%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native $1"
-alias download-vid="python3 $(which youtube-dl) --newline -i -o "./musc/%(title)s.%(ext)s" -x --audio-format mp3 --ignore-config --hls-prefer-native  $1"
+# alias download-vid="python3 $(which youtube-dl) --newline -i -o "./vid/%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native $1"
+# alias download-vid="python3 $(which youtube-dl) --newline -i -o "./musc/%(title)s.%(ext)s" -x --audio-format mp3 --ignore-config --hls-prefer-native  $1"
 
