@@ -1,0 +1,16 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[package]
+disabled = true
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[directory]
+format = "[$path](bold blue) "
+truncation_length = 2
+truncation_symbol = ".../"
