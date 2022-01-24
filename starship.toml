@@ -1,10 +1,10 @@
 add_newline = false
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
-[package]
-disabled = true
+# [package]
+# disabled = true
 
 [character]
 success_symbol = "[➜](bold green)"
