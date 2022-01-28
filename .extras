@@ -2,3 +2,5 @@
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
+
+export GPG_TTY=$(tty)

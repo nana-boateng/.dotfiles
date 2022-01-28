@@ -21,6 +21,9 @@ alias gadd="git add $*"
 alias clone="git clone $*"
 alias gcomm="git commit -m $*"
 alias sign-comm="git commit -S -m $*"
+alias clone="git clone $*"
+alias pull="git pull $*"
+alias push="git push $*"
 
 # vim 
 alias v="nvim"
