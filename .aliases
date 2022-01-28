@@ -1,11 +1,10 @@
 
 # terminal
-alias e="exa -F"
+alias e="exa --grid --long --all"
 alias etree="exa --tree --color-scale -L 5"
 alias ell="exa -l --git --group-directories-first"
 alias elg="exa --grid --long --all --classify --binary"
 alias la="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git --all"
-alias e="exa --long"
 alias eee="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --grid --git"
 alias ccc="clear"
 alias venv"source ./venv/bin/activate"
@@ -19,6 +18,7 @@ alias rezsh="source ~/.zshrc"
 alias gst="git status"
 alias gall="git add . && git commit -m $*"
 alias gadd="git add $*"
+alias clone="git clone $*"
 alias gcomm="git commit -m $*"
 alias sign-comm="git commit -S -m $*"
 
