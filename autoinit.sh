@@ -12,6 +12,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # install neovim
 brew install neovim
+# install exa
+brew install exa
 
 # install git
 brew install git
