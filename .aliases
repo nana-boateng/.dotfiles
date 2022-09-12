@@ -10,6 +10,10 @@ alias venv"source ./venv/bin/activate"
 alias copy="xclip"
 alias paste="xclip -o"
 
+# tmux
+alias attach="tmux a -t $*"
+alias tmls="tmux ls"
+
 # zsh
 alias rezsh="source ~/.zshrc"
 
