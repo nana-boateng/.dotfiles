@@ -1,15 +1,16 @@
-
 # terminal
-alias e="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --git"
-alias etree="exa --tree --color-scale -L 5"
-alias ell="exa -l --git --group-directories-first"
-alias elg="exa --grid --long --all --classify --binary"
-alias la="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=long-iso --binary --git --all"
-alias eee="exa --long --all"
+alias e="exa --grid --long --all"
+alias etree="exa --icons --tree --color-scale -L 5"
+alias lg="exa --grid --long --all --classify --binary --color-scale"
+alias la="exa --icons --classify --group-directories-first --color-scale --header --long --time-style=default --binary --git --all"
 alias ccc="clear"
 alias venv"source ./venv/bin/activate"
 alias copy="xclip"
 alias paste="xclip -o"
+
+# tmux
+alias attach="tmux a -t $*"
+alias tmls="tmux ls"
 
 # zsh
 alias rezsh="source ~/.zshrc"
