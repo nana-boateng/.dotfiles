@@ -1,6 +1,5 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.sideBar.location": "right",
   "editor.suggestSelection": "first",
@@ -13,12 +12,16 @@
   },
   "glassit.alpha": 235,
   "workbench.colorTheme": "SynthWave '84",
-  "editor.fontFamily": "VictorMono NF",
+  "editor.fontFamily": "Victor Mono",
+  "editor.fontLigatures": true,
   "editor.cursorSmoothCaretAnimation": true,
   "editor.smoothScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
+  "vim.enableNeovim": true,
+  "vim.neovimUseConfigFile": true,
+  "vim.neovimConfigPath": "~/.config/nvim/",
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
@@ -106,5 +109,8 @@
     "<C-v>": false,
     "<C-z>": false,
     "<C-y>": false
-  }
+  },
+  "window.zoomLevel": 1,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on"
 }
