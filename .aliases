@@ -29,7 +29,7 @@ alias pull="git pull $*"
 alias push="git push $*"
 
 # vim 
-alias v="nvim"
+alias v="~/.local/bin/lvim"
 alias vim="nvim"
 alias aliases="nvim ~/.aliases"
 
