@@ -1,57 +1,84 @@
 "
-" System
+" A (not so) minimal vimrc based on vim-galore https://github.com/mhinz/vim-galore
 "
 
-set shell=/bin/zsh
+" You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
+" We set it explicitely to make our position clear!
+set nocompatible
 
-" Use system clipboard
-set clipboard=unnamedplus
+filetype plugin indent on  " Load plugins according to detected filetype.
+syntax on                  " Enable syntax highlighting.
 
-" 
-" Styling
-"
+set autoindent             " Indent according to previous line.
+set expandtab              " Use spaces instead of tabs.
+set softtabstop =4         " Tab key indents by 4 spaces.
+set shiftwidth  =4         " >> indents by 4 spaces.
+set shiftround             " >> indents to next multiple of 'shiftwidth'.
 
-" Highlighting current line
-set cursorline
+set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set hidden                 " Switch between buffers without having to save first.
+set laststatus  =2         " Always show statusline.
+set display     =lastline  " Show as much as possible of the last line.
 
-" Enable numbers
-set number relativenumber
+set showmode               " Show current mode in command-line.
+set showcmd                " Show already typed keys when more are expected.
 
-" Hide the mode when using Airline
-set noshowmode
+set incsearch              " Highlight while searching with / or ?.
+set hlsearch               " Keep matches highlighted.
 
-" Set window title
-set title
+set ttyfast                " Faster redrawing.
+set lazyredraw             " Only redraw when necessary.
 
-" 
-" Indentation
-"
-set autoindent
+set splitbelow             " Open new windows below the current window.
+set splitright             " Open new windows right of the current window.
 
-" Set indentation level. Do NOT remove trailing space
+set cursorline             " Find the current line quickly.
+set wrapscan               " Searches wrap around end-of-file.
+set report      =0         " Always report changed lines.
+set synmaxcol   =200       " Only highlight the first 200 columns.
+
+
+set shell=/bin/zsh	   " Set shell to zsh
+set clipboard=unnamedplus  " Use system clipboard
+set cursorline 		   " Highlighting current line
+
+set number relativenumber  " Enable numbers
+set title 		   " Set window title
+set autoindent		   " Indentation
 set list lcs=tab:\|\ 
-
-" Folding method based on syntax
-set foldmethod=syntax
+" Set indentation level. Do NOT remove trailing space
+set foldmethod=syntax	   " Folding method based on syntax
 set foldlevelstart=0
+set ignorecase     	   " Ignore case when searching
+set smartcase      
+set incsearch      	   " Highlight patterns while typing
+set showmatch      	   " Show matching brackets
+set termguicolors
+" let g:rustfmt_autosave = 1
 
-" 
-" Search
-"
+tnoremap <Esc> <C-\><C-n>  
 
-" Ignore case when searching
-set ignorecase
-set smartcase
+set list                   " Show non-printable characters.
+if has('multi_byte') && &encoding ==# 'utf-8'
+  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+else
+  let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+endif
 
-" Highlight patterns while typing
-set incsearch
+" The fish shell is not very compatible to other shells and unexpectedly
+" breaks things that use 'shell'.
+if &shell =~# 'fish$'
+  set shell=/bin/bash
+endif
 
-" Show matching brackets
-set showmatch
-
-"
-" Development
-"
-
-" Terminal
-tnoremap <Esc> <C-\><C-n>
+" Put all temporary files under the same directory.
+" https://github.com/mhinz/vim-galore#temporary-files
+set backup
+set backupdir   =$HOME/.vim/files/backup/
+set backupext   =-vimbackup
+set backupskip  =
+set directory   =$HOME/.vim/files/swap//
+set updatecount =100
+set undofile
+set undodir     =$HOME/.vim/files/undo/
+set viminfo     ='100,n$HOME/.vim/files/info/viminfo
