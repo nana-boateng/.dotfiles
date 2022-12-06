@@ -9,7 +9,7 @@ alias copy="xclip"
 alias paste="xclip -o"
 
 # tmux
-alias attach="tmux a -t $*"
+alias attach="tmux a $*"
 alias tmls="tmux ls"
 
 # zsh
