@@ -10,9 +10,8 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "glassit.alpha": 235,
   "workbench.colorTheme": "SynthWave '84",
-  "editor.fontFamily": "Victor Mono",
+  "editor.fontFamily": "Victor Mono NF",
   "editor.fontLigatures": true,
   "editor.cursorSmoothCaretAnimation": true,
   "editor.smoothScrolling": true,

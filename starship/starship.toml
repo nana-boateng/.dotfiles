@@ -1,8 +1,0 @@
-[character]                       
-success_symbol = "[➜](bold green)"
-error_symbol = "[➜](bold red)"
-
-[directory]
-format = "[$path](bold blue) "
-truncation_length = 2
-truncation_symbol = "/"

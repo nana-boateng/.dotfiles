@@ -1,11 +1,35 @@
-# source zsh highlighting
+# source Distro specific files
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
 
-export GPG_TTY=$(tty)
-
+if [[ -e ~/.arco-extras ]]; then
+  source ~/.arco-extras
+fi
 
 if [[ -e /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+# EXPORTS
+
+export GPG_TTY=$(tty)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# CUSTOM ALIAS FUNCTIONS
+# edit zsh and reload shell to update changes 
+editZsh() {
+  vim ~/.zshrc
+  exec zsh
+}
+
+# copy zsh config file to repo, commit with argument and push to github
+commitZsh() {
+  cd ~/.dotfiles
+  git add .
+  git commit -S -m $1
+  git push
+}
