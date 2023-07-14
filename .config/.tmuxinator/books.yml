@@ -1,0 +1,31 @@
+name: books
+root: ~/projects/SPOT/books/admin-tool/
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - frontend:
+          - clear
+          - v .
+  - runners:
+      layout: even-vertical
+      panes:
+        - frontend:
+          - clear
+          - cd ./client
+          - ng serve
+        - backend:
+          layout: even-horizontal
+          panes:
+            - backend-run:
+              - clear
+              - cd ./server
+              - npm run dev
+            - backend-test:
+              - ccc
+              - cd ./server
+              - npm run test
+        - test:
+          - clear
+          - cd ./client
+          - ng test

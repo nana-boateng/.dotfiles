@@ -1,0 +1,26 @@
+name: odesi
+root: ~/projects/SPOT/odesi/odesi-rest/
+windows:
+  - lvim:
+      layout: even-vertical
+      panes:
+        - frontend:
+          - clear
+          - cd ./frontend
+          - v .
+  - runners:
+      layout: even-vertical
+      panes:
+        - frontend:
+          - clear
+          - cd ./frontend
+          - ng serve
+        - backend:
+          - clear
+          - cd ./backend
+          - npm run start
+        - test:
+          - clear
+          - cd ./frontend
+          - ng test
+

@@ -1,7 +1,10 @@
 [user]
-	email = 44186742+nana-boateng@users.noreply.github.com
+	email = n.boateng@utoronto.ca
 	name = nana-boateng
+	signingkey = A9AFEA95BFBFFB07
 [credential]
 	helper = cache
 [commit]
 	gpgsign = true
+[push]
+	autoSetupRemote = true
