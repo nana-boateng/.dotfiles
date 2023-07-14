@@ -55,7 +55,7 @@ M.config = function()
     [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
   vim.wo.foldnestmax = 3
   vim.wo.foldminlines = 1
-  vim.opt.guifont = "VictorMono Nerd Font:h13"
+  vim.opt.guifont = "FiraCode Nerd Font:h13"
   vim.opt.cmdheight = 1
   vim.g.dashboard_enable_session = 0
   vim.g.dashboard_disable_statusline = 1
@@ -68,7 +68,7 @@ M.config = function()
   vim.opt.fillchars = {
     fold = " ",
     eob = " ", -- suppress ~ at EndOfBuffer
-    diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+    diff = "╱", -- alternatives = ⣿ ░ ─
     msgsep = "‾",
     foldopen = "▾",
     foldsep = "│",
