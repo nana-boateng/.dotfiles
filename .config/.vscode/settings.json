@@ -13,7 +13,7 @@
   "workbench.colorTheme": "SynthWave '84",
   "editor.fontFamily": "Victor Mono NF",
   "editor.fontLigatures": true,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "vim.easymotion": true,
   "vim.incsearch": true,

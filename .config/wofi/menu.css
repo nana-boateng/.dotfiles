@@ -1,0 +1,7 @@
+/* https://raw.githubusercontent.com/flick0/dotfiles/aurora/config/wofi/menu.css */
+
+@import "~/.config/wofi/style.css";
+window {
+	font-family: "FiraCode Nerd Font Mono";
+	font-size: 13px;
+}
