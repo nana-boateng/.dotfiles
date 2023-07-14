@@ -7,7 +7,7 @@
 -- Neovim
 -- =========================================
 lvim.leader = " "
-lvim.colorscheme = "tokyonight" -- set to a custom theme
+-- lvim.colorscheme = "tokyonight" -- set to a custom theme
 lvim.builtin.time_based_themes = true -- set false to use your own configured theme
 lvim.transparent_window = true -- enable/disable transparency
 lvim.debug = false
@@ -85,3 +85,8 @@ lvim.builtin.latex = {
 if lvim.builtin.cursorline.active then
   lvim.lsp.document_highlight = false
 end
+
+-- Additional Plugins
+-- =========================================
+require("user.plugins").config()
+
