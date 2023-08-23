@@ -68,7 +68,7 @@ M.config = function()
   vim.opt.fillchars = {
     fold = " ",
     eob = " ", -- suppress ~ at EndOfBuffer
-    diff = "╱", -- alternatives = ⣿ ░ ─
+    diff = "░", -- alternatives = ⣿ ░ ─
     msgsep = "‾",
     foldopen = "▾",
     foldsep = "│",
