@@ -1,137 +1,5 @@
 local M = {}
 
-M.tokyonight = function()
-  -- require("tokyonight").setup {
-  lvim.builtin.theme.tokyonight.options = {
-    style = "storm",
-    transparent = lvim.transparent_window,
-    terminal_colors = true,
-    styles = {
-      comments = {},
-      keywords = { italic = true },
-      functions = {},
-      variables = {},
-      sidebars = "dark",
-      floats = "dark",
-    },
-    sidebars = {
-      "qf",
-      "vista_kind",
-      "terminal",
-      "lazy",
-      "spectre_panel",
-      "NeogitStatus",
-      "help",
-    },
-    day_brightness = 0.3,
-    hide_inactive_statusline = true,
-    dim_inactive = true,
-    lualine_bold = false,
-    on_colors = function(colors)
-      colors.git = { change = "#6183bb", add = "#449dab", delete = "#f7768e", conflict = "#bb7a61" }
-      colors.bg_dark = "#1a1e30"
-      colors.bg_dim = "#1f2335"
-      colors.bg_float = "#1a1e30"
-    end,
-    on_highlights = function(hl, c)
-      c.bg_dark = "#1a1e30"
-      c.bg_dim = "#1f2335"
-      c.bg_float = "#1a1e30"
-      local current_colors = M.colors.tokyonight_colors
-      hl["@variable"] = { fg = c.fg }
-      hl.NormalFloat = { fg = current_colors.fg, bg = "#181924" }
-      hl.Cursor = { fg = current_colors.bg, bg = current_colors.fg }
-      hl.NormalNC = { fg = current_colors.fg_dark, bg = "#1c1d28" }
-      hl.Normal = { fg = current_colors.fg, bg = "#1f2335" }
-      hl.CursorLineNr = { fg = current_colors.orange, style = "bold" }
-    end,
-  }
-end
-
-M.rose_pine = function()
-  require("rose-pine").setup {
-    variant = "main",
-    dark_variant = "main",
-    bold_vert_split = false,
-    dim_nc_background = lvim.builtin.global_statusline,
-    disable_background = lvim.transparent_window,
-    disable_float_background = true,
-    disable_italics = true,
-    ---@usage string hex value or named color from rosepinetheme.com/palette
-    groups = {
-      border = "highlight_med",
-      comment = "muted",
-      link = "iris",
-      punctuation = "subtle",
-
-      error = "love",
-      hint = "iris",
-      info = "foam",
-      warn = "gold",
-
-      headings = {
-        h1 = "iris",
-        h2 = "foam",
-        h3 = "rose",
-        h4 = "gold",
-        h5 = "pine",
-        h6 = "foam",
-      },
-    },
-    highlight_groups = {
-      Boolean = { fg = "love" },
-      Cursor = { fg = "#232136", bg = "text" },
-      NormalFloat = { bg = "base" },
-      MsgArea = { fg = "text" },
-      VertSplit = { fg = "highlight_low", bg = "highlight_low" },
-      SignColumn = { fg = "text", bg = "none" },
-      SignColumnSB = { fg = "text", bg = "none" },
-      mkdInlineURL = { fg = "iris" },
-      ["@variable"] = { fg = "text" },
-      ["@variable.builtin"] = { fg = "love" },
-      ["@type"] = { fg = "foam" },
-      ["@text"] = { fg = "text" },
-      ["@property"] = { fg = "iris" },
-      ["@parameter"] = { fg = "iris" },
-      ["@constant.builtin"] = { fg = "love" },
-      ["@constant"] = { fg = "foam" },
-      ["@constructor"] = { fg = "foam" },
-      ["@field"] = { fg = "foam" },
-      ["@function.builtin"] = { fg = "love" },
-      ["@function"] = { fg = "rose" },
-      ["@include"] = { fg = "pine" },
-      ["@keyword"] = { fg = "pine" },
-      ["@keyword.operator"] = { fg = "subtle" },
-      ["@label"] = { fg = "foam" },
-      ["@punctuation.bracket"] = { fg = "muted" },
-      ["@punctuation.delimiter"] = { fg = "muted" },
-      ["@punctuation.special"] = { fg = "muted" },
-      ["@string.escape"] = { fg = "pine" },
-      ["@string.special"] = { fg = "gold" },
-      ["@tag"] = { fg = "foam" },
-      ["@tag.delimiter"] = { fg = "subtle" },
-      ["@text.title"] = { fg = "iris" },
-      ["@text.uri"] = { fg = "iris" },
-      CmpItemKindText = { fg = "gold" },
-      CmpItemKindConstructor = { fg = "foam" },
-      CmpItemKindField = { fg = "foam" },
-      CmpItemKindValue = { fg = "text" },
-      CmpItemKindEvent = { fg = "text" },
-      CmpItemKindUnit = { fg = "gold" },
-      CmpItemKindConstant = { fg = "gold" },
-      CmpItemKindModule = { fg = "iris" },
-      CmpItemKindEnum = { fg = "#c5a8e8" },
-      CmpItemKindStruct = { fg = "#56949f" },
-      CmpItemKindTypeParameter = { fg = "foam" },
-      CmpItemKindTypeKeyword = { fg = "pine" },
-      CmpItemKindTypeDirectory = { fg = "foam" },
-      CmpItemKindReference = { fg = "gold" },
-      CmpItemKindOperator = { fg = "subtle" },
-      CmpItemKindTypeSnippet = { fg = "pine" },
-    },
-  }
-end
-
 M.catppuccin = function()
   local catppuccin = require "catppuccin"
   local opts = {
@@ -160,7 +28,6 @@ M.catppuccin = function()
       treesitter = true,
       mason = true,
       neotest = lvim.builtin.test_runner == "neotest",
-      noice = lvim.builtin.noice.active,
       native_lsp = {
         enabled = true,
         virtual_text = {
@@ -185,7 +52,6 @@ M.catppuccin = function()
         colored_indent_levels = false,
       },
       gitsigns = lvim.builtin.gitsigns.active,
-      notify = lvim.builtin.noice.active,
       nvimtree = true,
       neotree = lvim.builtin.tree_provider == "neo-tree",
       overseer = lvim.builtin.task_runner == "overseer",
@@ -506,14 +372,6 @@ M.telescope_theme = function(colorset)
     end
     set_fg_bg("Hlargs", current_colors.hlargs, "none")
     set_fg_bg("CmpBorder", current_colors.cmp_border, current_colors.cmp_border)
-    link("NoiceCmdlinePopupBorder", "CmpBorder")
-    link("NoiceCmdlinePopupBorderCmdline", "CmpBorder")
-    link("NoiceCmdlinePopupBorderFilter", "CmpBorder")
-    link("NoiceCmdlinePopupBorderHelp", "CmpBorder")
-    link("NoiceCmdlinePopupBorderIncRename", "CmpBorder")
-    link("NoiceCmdlinePopupBorderInput", "CmpBorder")
-    link("NoiceCmdlinePopupBorderLua", "CmpBorder")
-    link("NoiceCmdlinePopupBorderSearch", "CmpBorder")
     set_fg_bg("diffAdded", current_colors.git.add, "NONE")
     set_fg_bg("diffRemoved", current_colors.git.delete, "NONE")
     set_fg_bg("diffChanged", current_colors.git.change, "NONE")

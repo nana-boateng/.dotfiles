@@ -1,115 +1,53 @@
-###
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-#installation via script from github
-#export ZSH="/home/$USER/.oh-my-zsh"
-#installation via paru -S oh-my-zsh-git
-export ZSH=/usr/share/oh-my-zsh/
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-ZSH_THEME=""
+ ZSH_THEME=""
 
-plugins=(git z)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(extract zsh-z zsh-syntax-highlighting)
 
-if [ -f $ZSH/oh-my-zsh.sh ]; then
-  source $ZSH/oh-my-zsh.sh
-fi
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+#source oh-my-zsh for all the extras
+source $ZSH/oh-my-zsh.sh
 
 if [[ -e ~/.env ]]; then
   source ~/.env
 fi
-
+# source aliases
+if [[ -e ~/.aliases ]]; then
+  source ~/.aliases
+fi
 # source extras
 if [[ -e ~/.extras ]]; then
   source ~/.extras
 fi
 
-####   ARCOLINUX SETTINGS   ####
-export PAGER='most'
+# EXPORTS
+export CHROME_BIN=/usr/bin/chromium
 
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
-setopt GLOB_DOTS
-#share commands between terminal instances or not
-unsetopt SHARE_HISTORY
-#setopt SHARE_HISTORY
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-export HISTCONTROL=ignoreboth:erasedups
-
-# Make nano the default editor
-
-export EDITOR='vim'
-export VISUAL='codium'
-
-#PS1='[\u@\h \W]\$ '
-
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-
-### ALIASES ###
-
-# source aliases
-if [[ -e ~/.aliases ]]; then
-  source ~/.aliases
-fi
-
-[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
-
-# reporting tools - install when not installed
-# neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
-#colorscript random
-
+# prompt
 eval "$(starship init zsh)"
 
+# set vim mode
+bindkey -v
+
+# GPG
+export GPG_TTY=$(tty)
+
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# bun completions
+[ -s "/Users/nana/.bun/_bun" ] && source "/Users/nana/.bun/_bun"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/Users/nana/.turso:$PATH"
