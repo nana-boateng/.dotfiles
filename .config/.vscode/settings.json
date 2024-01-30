@@ -1,20 +1,47 @@
 {
+  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "security.workspace.trust.untrustedFiles": "open",
-  "workbench.sideBar.location": "right",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "workbench.colorTheme": "SynthWave '84",
-  "editor.fontFamily": "Victor Mono NF",
-  "editor.fontLigatures": true,
+  // UI/UX //
+  "window.titleBarStyle": "native",
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "kitty",
+  "terminal.external.osxExec": "kitty.app",
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "VictorMono Nerd Font",
+  "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.sideBar.location": "right",
+  "apc.electron": {
+    "frame": false
+  },
+  "apc.listRow": {
+    "height": 21
+  },
+  "apc.statusBar": {
+    "height": 27
+  },
+  "apc.header": {
+    "height": 33.5
+  },
+  "apc.sidebar.titlebar": {
+    "height": 33.5,
+    "fontSize": 12
+  },
+  "apc.stylesheet": {
+    ".title-actions .actions-container": "display: none;",
+    // ".composite.title": "display: block !important;",
+    // ".title-label": "display: none !important;",
+    // ".monaco-workbench .part.sidebar .title-actions .actions-container": "display: none !important;"
+
+    ".title-label h2": "visibility: hidden; position: relative;",
+    ".title-label h2:after": "visibility: visible; position: absolute; top: 0; left: 0; content: 'EXPLORER'"
+  },
+  // VIM //
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -24,7 +51,21 @@
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.sneak": true,
-  "vim.easymotionMarkerooundColor": "#020202",
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false
+  },
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "d"],
@@ -93,23 +134,8 @@
       "after": ["$"]
     }
   ],
-  "vim.leader": "<space>",
-
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    // VS Code new marker @ next occurence
-    "<C-d>": false,
-    // Copy
-    "<C-c>": false,
-    // Cut
-    "<C-x>": false,
-    // Paste
-    "<C-v>": false,
-    "<C-z>": false,
-    "<C-y>": false
-  },
-  "window.zoomLevel": 1,
-  "editor.formatOnSave": true,
-  "editor.wordWrap": "on"
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.activityBar.location": "hidden",
+  "editor.stickyScroll.enabled": true,
+  "workbench.iconTheme": "material-icon-theme"
 }
