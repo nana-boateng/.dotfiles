@@ -1,7 +1,6 @@
 [user]
 	email = n.boateng@utoronto.ca
 	name = nana-boateng
-	signingkey = A9AFEA95BFBFFB07
 [credential]
 	helper = cache
 [commit]
